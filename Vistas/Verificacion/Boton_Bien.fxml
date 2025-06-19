@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="151.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="108.0" layoutY="89.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="73.0" text="OK" />
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="40.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bien.jpg" />
+         </image></ImageView>
+      <Text layoutX="76.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Inicio de Sesión Exitoso!" textAlignment="CENTER" wrappingWidth="162.13671875" />
+   </children>
+</AnchorPane>

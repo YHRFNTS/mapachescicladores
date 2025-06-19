@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tu.paquete.MedicalInterfaceController">
+
+    <!-- Barra superior -->
+    <top>
+        <HBox spacing="15" style="-fx-background-color: #1A9A88;" alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <!-- Logo -->
+                <StackPane>
+                    <children>
+                        <Circle radius="20" fill="WHITE"/>
+                        <Label text="+" style="-fx-font-size: 30px; -fx-text-fill: #1A9A88;"/>
+                    </children>
+                </StackPane>
+
+                <!-- Barra de búsqueda -->
+                <HBox spacing="5" alignment="CENTER_LEFT">
+                    <children>
+                        <TextField promptText="Buscar" prefWidth="250"/>
+                        <Button text="🔍"/>
+                    </children>
+                </HBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <!-- Botones usuario, notificaciones, menú -->
+                <Button text="👤" style="-fx-background-color: transparent; -fx-font-size: 18px;"/>
+                <Button text="🔔" style="-fx-background-color: transparent; -fx-font-size: 18px;"/>
+                <Button text="≡" style="-fx-background-color: transparent; -fx-font-size: 18px;"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Centro con calendario y formulario -->
+    <center>
+        <HBox spacing="30" style="-fx-background-color: #112B4F;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <children>
+
+                <!-- Calendario simulado -->
+                <GridPane hgap="10" vgap="10" prefWidth="600" style="-fx-background-color: white; -fx-background-radius: 10;">
+                    <!-- Aquí agregaremos meses con días simplificados -->
+                    <!-- Usaremos fx:id para identificar si quieres manejarlo desde controlador -->
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                    </columnConstraints>
+
+                    <!-- Meses y días simplificados, ejemplo con 4 meses en 1 fila -->
+                    <!-- Puedes replicar para todos los meses desde el controlador si quieres -->
+                    <children>
+                        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="5">
+                            <children>
+                                <Label text="ENERO" style="-fx-text-fill: #1A9A88; -fx-font-weight: bold;"/>
+                                <Label text="2025" style="-fx-font-weight: bold;"/>
+                                <VBox spacing="2">
+                                    <children>
+                                        <Label text="5"/>
+                                        <Label text="10"/>
+                                        <Label text="15"/>
+                                        <Label text="20"/>
+                                        <Label text="25"/>
+                                        <Label text="30"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" spacing="5">
+                            <children>
+                                <Label text="FEBRERO" style="-fx-text-fill: #1A9A88; -fx-font-weight: bold;"/>
+                                <Label text="2025" style="-fx-font-weight: bold;"/>
+                                <VBox spacing="2">
+                                    <children>
+                                        <Label text="5"/>
+                                        <Label text="10"/>
+                                        <Label text="15"/>
+                                        <Label text="20"/>
+                                        <Label text="25"/>
+                                        <Label text="30"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="0" spacing="5">
+                            <children>
+                                <Label text="MARZO" style="-fx-text-fill: #1A9A88; -fx-font-weight: bold;"/>
+                                <Label text="2025" style="-fx-font-weight: bold;"/>
+                                <VBox spacing="2">
+                                    <children>
+                                        <Label text="5"/>
+                                        <Label text="10"/>
+                                        <Label text="15"/>
+                                        <Label text="20"/>
+                                        <Label text="25"/>
+                                        <Label text="30"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="3" GridPane.rowIndex="0" spacing="5">
+                            <children>
+                                <Label text="ABRIL" style="-fx-text-fill: #1A9A88; -fx-font-weight: bold;"/>
+                                <Label text="2025" style="-fx-font-weight: bold;"/>
+                                <VBox spacing="2">
+                                    <children>
+                                        <Label text="5"/>
+                                        <Label text="10"/>
+                                        <Label text="15"/>
+                                        <Label text="20"/>
+                                        <Label text="25"/>
+                                        <Label text="30"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </GridPane>
+
+                <!-- Formulario registro -->
+                <VBox spacing="15" prefWidth="350" alignment="TOP_CENTER">
+                    <children>
+                        <Label text="Bienvenido por favor elije los siguientes datos para tu registro" wrapText="true" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+
+                        <TextField promptText="Ingresa tu correo institucional" maxWidth="Infinity"/>
+                        <ComboBox promptText="Día" maxWidth="Infinity">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Lunes"/>
+                                    <String fx:value="Martes"/>
+                                    <String fx:value="Miércoles"/>
+                                    <String fx:value="Jueves"/>
+                                    <String fx:value="Viernes"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <ComboBox promptText="Horario" maxWidth="Infinity">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="08:00"/>
+                                    <String fx:value="09:00"/>
+                                    <String fx:value="10:00"/>
+                                    <String fx:value="11:00"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <ComboBox promptText="Motivo de consulta" maxWidth="Infinity">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Consulta general"/>
+                                    <String fx:value="Urgencias"/>
+                                    <String fx:value="Recetas"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <TextField promptText="Ingresa tu CURP" maxWidth="Infinity"/>
+                        <TextField promptText="Ingresa tu numero telefonico" maxWidth="Infinity"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button layoutX="273.0" layoutY="157.0" mnemonicParsing="false" text="OK" wrapText="true">
+            <font>
+                <Font name="SansSerif Bold" size="22.0" />
+            </font>
+        </Button>
+        <Circle fill="#d7d7fa" layoutX="53.0" layoutY="72.0" radius="31.0" stroke="#5b5bd4" strokeType="INSIDE" />
+        <Label layoutX="124.0" layoutY="56.0" text="Opciones del menú.">
+            <font>
+                <Font name="SansSerif Bold" size="28.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6c6ce7" height="22.0" layoutX="48.0" layoutY="72.0" stroke="#fcfafa" strokeType="INSIDE" width="11.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6c6ce7" height="12.0" layoutX="48.0" layoutY="56.0" stroke="#fcfafa" strokeType="INSIDE" width="11.0" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</Pane>
